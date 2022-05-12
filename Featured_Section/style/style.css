@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  padding: 100px 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.container .head h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #2F3144;
+  margin-bottom: 50px;
+  max-width: 700px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.left .card {
+  width: 100%;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  -webkit-transition: .3s ease-in-out background-color;
+  transition: .3s ease-in-out background-color;
+}
+
+.left .card ion-icon {
+  padding: 15px;
+  background-color: #ffbc00;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #fff;
+}
+
+.left .card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #2F3144;
+  margin: 10px 0;
+}
+
+.left .card h2 p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.left .card:hover {
+  background-color: #ffbc00;
+}
+
+.left .card:hover ion-icon {
+  background-color: #fff;
+  color: #2F3144;
+}
+
+.right {
+  border: 1px solid #e7e8ec;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.right h1 {
+  font-size: 22px;
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.right .blog-item {
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.right .blog-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.right .blog-item p {
+  color: #da8f00;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.right .blog-item:hover {
+  background-color: #e7e8ec;
+}
+
+@media only screen and (min-width: 700px) {
+  .container .head h1 {
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 50px;
+  }
+  .container .main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .left {
+    -webkit-box-flex: .7;
+        -ms-flex: .7;
+            flex: .7;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .container .card {
+    margin: 0;
+  }
+  .container .right {
+    -webkit-box-flex: .3;
+        -ms-flex: .3;
+            flex: .3;
+    margin: 30px;
+  }
+}

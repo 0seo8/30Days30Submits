@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color-1: #2F3144;
+$color-2: #fff;
+$color-3: #ffbc00;
+$color-4: #da8f00;
+$color-5: #e7e8ec;
+
+html {
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  background-color: $color-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 100px 30px;
+  width: 100%;
+  max-width: 1200px;
+
+  .head {
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 25px;
+      color: $color-1;
+      margin-bottom: 50px;
+      max-width: 700px;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.left{
+  .card {
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: .3s ease-in-out background-color;
+
+    ion-icon {
+      padding: 15px;
+      background-color: $color-3;
+      border-radius: 50%;
+      font-size: 25px;
+      color: $color-2;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: capitalize;
+      color: $color-1;
+      margin: 10px 0;
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    &:hover {
+      background-color: $color-3;
+      ion-icon {
+        background-color: $color-2;
+        color: $color-1;
+      }
+    }  
+  }
+}
+
+.right {
+  border: 1px solid $color-5;
+  padding: 20px;
+  border-radius: 8px;
+ h1 {
+   font-size: 22px;
+   font-weight: 700;
+   padding-left: 20px;
+ } 
+ .blog-item {
+   padding: 10px 20px;
+   margin-top: 20px;
+   cursor: pointer;
+   border-radius: 8px;
+   h3 {
+     font-size: 18px;
+     font-weight: 700;
+   }
+   p {
+     color: $color-4;
+     font-size: 16px;
+     font-weight: 400;
+   }
+  &:hover {
+    background-color: $color-5;
+
+  }
+ }
+}
+
+@media only screen and(min-width:700px) {
+  .container {
+    .head {
+      h1 {
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 50px;
+      }
+    }
+    .main {
+      flex-direction: row;
+    }
+    .left {
+      flex: .7;
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      grid-gap: 20px;
+    }
+    .card {
+      margin: 0;
+    }
+    .right {
+      flex: .3;
+      margin: 30px;
+    }
+  }
+}
