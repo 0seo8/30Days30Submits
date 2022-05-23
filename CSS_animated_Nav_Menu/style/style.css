@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -60,12 +60,12 @@ ul li:hover a {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: -80px;
+  right: -60px;
   height: 60px;
   width: 60px;
   border-radius: 50%;
   background-color: white;
-  background-image: url("Hamburger_icon.svg.png");
+  background-image: url("./Hamburger_icon.svg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -76,8 +76,58 @@ ul li:hover a {
   transition: .5s ease transform;
 }
 
-.icon:hover {
-  -webkit-transform: translateY(-50%) rotate(360deg);
-          transform: translateY(-50%) rotate(360deg);
-  background-image: url("./style/close.png");
+.icon.close {
+  -webkit-transform: trnaslateY(-50%) rotate(360deg);
+          transform: trnaslateY(-50%) rotate(360deg);
+  background-image: url("close.png");
+}
+
+ul {
+  width: 0px;
+  overflow: hidden;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  padding: 20px;
+}
+
+nav.show ul {
+  width: 450px;
+  -webkit-transform: translate(0px);
+          transform: translate(0px);
+  opacity: 1;
+  pointer-events: all;
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+}
+
+@media only screen and (max-width: 76px) {
+  body {
+    font-size: 14px;
+  }
+  body li a {
+    padding: 5px 10px;
+  }
+  body nav ul {
+    padding: 15px;
+  }
+  body nav.show ul {
+    width: 260px;
+  }
+  body .icon {
+    width: 45px;
+    height: 45px;
+    right: -50px;
+  }
+  body nav {
+    top: 10px;
+    right: 60px;
+  }
 }
