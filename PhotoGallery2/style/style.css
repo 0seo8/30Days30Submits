@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #dbe2e9;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px 0;
+}
+
+.container {
+  background-color: #fff;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 61px 7px #5e849c49;
+          box-shadow: 0px 0px 61px 7px #5e849c49;
+  padding: 50px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: cetner;
+      -ms-flex-pack: cetner;
+          justify-content: cetner;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  cursor: pointer;
+}
+
+.header form {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 300px;
+  position: relative;
+}
+
+.header form input {
+  border: none;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.479);
+  margin-bottom: 20px;
+  font-size: 20px;
+  outline: none;
+  color: gray;
+  background-color: transparent;
+  width: 100%;
+}
+
+.header form input::-webkit-input-placeholder {
+  opacity: .5;
+  color: gray;
+  font-family: montserrat;
+  font-weight: 500;
+}
+
+.header form input:-ms-input-placeholder {
+  opacity: .5;
+  color: gray;
+  font-family: montserrat;
+  font-weight: 500;
+}
+
+.header form input::-ms-input-placeholder {
+  opacity: .5;
+  color: gray;
+  font-family: montserrat;
+  font-weight: 500;
+}
+
+.header form input::placeholder {
+  opacity: .5;
+  color: gray;
+  font-family: montserrat;
+  font-weight: 500;
+}
+
+.header form ion-icon {
+  position: absolute;
+  right: 0;
+  opacity: .5;
+  color: gray;
+  font-size: 20px;
+}
+
+.gallery {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.gallery .item {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  -webkit-transition: .3s ease box-shadow;
+  transition: .3s ease box-shadow;
+}
+
+.gallery .item:hover {
+  -webkit-box-shadow: 0px 0px 20px 3px #00000042;
+          box-shadow: 0px 0px 20px 3px #00000042;
+}
+
+.gallery .item:hover h3 {
+  bottom: 0;
+}
+
+.gallery .item h3 {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  background-color: #00000040;
+  color: aliceblue;
+  bottom: -70px;
+  font-weight: 300;
+  -webkit-transition: .5s ease-in-out bottom;
+  transition: .5s ease-in-out bottom;
+  font-size: 20px;
+}
+
+.load-more {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #000;
+  padding: 20px 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    max-width: 1160px;
+    padding: 100px;
+  }
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header h1 {
+    font-size: 50px;
+  }
+  .header input {
+    font-size: 24px;
+  }
+  .header input ion-icon {
+    font-size: 24px;
+  }
+  .gallery {
+    gap: 20px;
+  }
+}
